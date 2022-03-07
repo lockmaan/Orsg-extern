@@ -1,14 +1,14 @@
 import Head from "next/head";
-import ArticleList from "../components/ArticleList";
+import problemList from "../components/problemList";
 
-export default function Home({ articles }) {
+export default function Home({ problems }) {
   return (
     <div>
       <Head>
         <title>WebDev News</title>
         <meta name="keywords" content="web, developement, programming" />
       </Head>
-      <ArticleList articles={articles} />
+      <problemList problems={problems} />
     </div>
   );
 }
@@ -17,10 +17,10 @@ export default function Home({ articles }) {
 //   const res = await fetch(
 //     `https://jsonplaceholder.typicode.com/posts?_limit=6`
 //   );
-//   const articles = await res.json();
+//   const problems = await res.json();
 //   return {
 //     props: {
-//       articles,
+//       problems,
 //     },
 //   };
 // };

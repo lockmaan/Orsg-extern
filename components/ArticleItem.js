@@ -1,15 +1,15 @@
 import Link from "next/link";
-import articleStyles from "../styles/Article.module.css";
+import problemstyles from "../styles/problem.module.css";
 
-const ArticleItem = ({ article }) => {
+const problemItem = ({ problem }) => {
   return (
-    <Link href="/article/[id]" as={`/article/${article.id}`}>
-      <a className={articleStyles.card}>
-        <h3>{article.title}&rarr;</h3>
-        <p>{article.body}</p>
+    <Link href="/problem/[id]" as={`/problem/${problem.id}`}>
+      <a className={problemstyles.card}>
+        <h3>{problem.title}&rarr;</h3>
+        <p>{problem.body}</p>
       </a>
     </Link>
   );
 };
 
-export default ArticleItem;
+export default problemItem;

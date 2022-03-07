@@ -1,14 +1,14 @@
-import ArticleItem from "./ArticleItem";
-import articleStyles from "../styles/Article.module.css";
+import problemItem from "./problemItem";
+import problemstyles from "../styles/problem.module.css";
 
-const ArticleList = ({ articles }) => {
+const problemList = ({ problems }) => {
   return (
-    <div className={articleStyles.grid}>
-      {articles.map((article) => (
-        <ArticleItem key={article.id} article={article} />
+    <div className={problemstyles.grid}>
+      {problems.map((problem) => (
+        <problemItem key={problem.id} problem={problem} />
       ))}
     </div>
   );
 };
 
-export default ArticleList;
+export default problemList;

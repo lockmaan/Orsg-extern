@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const article = ({ article }) => {
+const problem = ({ problem }) => {
   // const router = useRouter()
   // const {id} = router.query  /*{id}*/
   return (
     <>
-      <h1>{article.title}</h1>
-      <p>{article.body}</p>
+      <h1>{problem.title}</h1>
+      <p>{problem.body}</p>
       <br />
       <Link href="/">Go Back</Link>
     </>
@@ -19,20 +19,20 @@ export const getStaticProps = async (context) => {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
   );
-  const article = await res.json();
+  const problem = await res.json();
 
   return {
     props: {
-      article,
+      problem,
     },
   };
 };
 
 export const getStaticPaths = async () => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-  const articles = await res.json();
+  const problems = await res.json();
 
-  const ids = articles.map((article) => article.id);
+  const ids = problems.map((problem) => problem.id);
   const paths = ids.map((id) => ({ params: { id: id.toString() } }));
   /*paths:{params:{id:'1',id:}}*/
   return {
@@ -41,4 +41,4 @@ export const getStaticPaths = async () => {
   };
 };
 
-export default article;
+export default problem;
