@@ -1,13 +1,15 @@
 import Head from "next/head";
+import Header from "../components/Header";
 import ProblemList from "../components/ProblemList";
 
 export default function Home({ problems }) {
   return (
     <div>
       <Head>
-        <title>WebDev News</title>
+        <title>ORSG</title>
         <meta name="keywords" content="web, developement, programming" />
       </Head>
+      <Header />
       <ProblemList problems={problems} />
     </div>
   );
