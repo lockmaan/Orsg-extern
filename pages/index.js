@@ -1,5 +1,5 @@
 import Head from "next/head";
-import problemList from "../components/problemList";
+import ProblemList from "../components/ProblemList";
 
 export default function Home({ problems }) {
   return (
@@ -8,19 +8,19 @@ export default function Home({ problems }) {
         <title>WebDev News</title>
         <meta name="keywords" content="web, developement, programming" />
       </Head>
-      <problemList problems={problems} />
+      <ProblemList problems={problems} />
     </div>
   );
 }
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(
-//     `https://jsonplaceholder.typicode.com/posts?_limit=6`
-//   );
-//   const problems = await res.json();
-//   return {
-//     props: {
-//       problems,
-//     },
-//   };
-// };
+export const getStaticProps = async () => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?_limit=6`
+  );
+  const problems = await res.json();
+  return {
+    props: {
+      problems,
+    },
+  };
+};

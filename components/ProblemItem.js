@@ -1,7 +1,7 @@
 import Link from "next/link";
 import problemstyles from "../styles/problem.module.css";
 
-const problemItem = ({ problem }) => {
+const ProblemItem = ({ problem }) => {
   return (
     <Link href="/problem/[id]" as={`/problem/${problem.id}`}>
       <a className={problemstyles.card}>
@@ -12,4 +12,4 @@ const problemItem = ({ problem }) => {
   );
 };
 
-export default problemItem;
+export default ProblemItem;
