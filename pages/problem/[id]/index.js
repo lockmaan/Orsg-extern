@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import PDF from "../../../components/PDF";
 
 const problem = ({ problem }) => {
   // const router = useRouter()
@@ -8,6 +9,7 @@ const problem = ({ problem }) => {
     <>
       <h1>{problem.title}</h1>
       <p>{problem.body}</p>
+      <PDF />
       <br />
       <Link href="/">Go Back</Link>
     </>
