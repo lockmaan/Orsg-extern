@@ -1,9 +1,11 @@
 import Link from "next/link";
-import navStyles from "../styles/Nav.module.css";
+import footerStyles from "../styles/Footer.module.css";
+import Credits from "./Credits";
+import SocialMedia from "./SocialMedia";
 
 const Footer = () => {
   return (
-    <footer className={navStyles.nav}>
+    <footer className={footerStyles.footer}>
       <ul>
         <li>
           <Link href="/">Home</Link>
@@ -12,6 +14,8 @@ const Footer = () => {
           <Link href="/about">About</Link>
         </li>
       </ul>
+      <Credits />
+      <SocialMedia />
     </footer>
   );
 };
